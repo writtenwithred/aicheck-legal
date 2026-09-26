@@ -3,50 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AICheck</title>
+    <title>Privacy Policy | AICheck</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; color: #333; }
-        h1 { font-size: 24px; margin-bottom: 5px; }
-        h2 { font-size: 18px; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        .date { color: #666; font-size: 14px; margin-bottom: 30px; }
+        :root {
+            --primary: #0f172a;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: var(--surface);
+            padding: 50px 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            border: 1px solid var(--border);
+        }
+        .header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+        .effective-date {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 18px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p, li {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 24px;
+        }
+        .contact-box {
+            background-color: var(--bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-top: 30px;
+        }
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            .container { padding: 30px 20px; }
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <div class="effective-date">Effective Date: September 26, 2026</div>
+        </div>
 
-    <h1>Privacy Policy for AICheck</h1>
-    <div class="date">Last Updated: September 26, 2026</div>
+        <p>This Privacy Policy (the "Policy") governs the collection, use, and processing of personal and sensitive information by the AICheck application ("Data Controller," "we," "our," or "us"). We are committed to protecting your privacy in compliance with applicable data protection frameworks, including the Personal Information Protection Act (PIPA) of the Republic of Korea.</p>
 
-    <h2>1. Information We Collect</h2>
-    <p>To provide our AI-driven infant analysis, we collect the following types of information:</p>
-    <ul>
-        <li><strong>Account Information:</strong> Email address, username, and basic profile data provided during registration.</li>
-        <li><strong>Audiovisual Data:</strong> Short audio recordings (cries) and video/image frames of the infant's face captured via your device's camera and microphone.</li>
-        <li><strong>User Feedback Data:</strong> Text-based reasoning and classification corrections you manually submit regarding the AI's analysis (metadata.json).</li>
-    </ul>
+        <h2>1. Scope of Data Collection</h2>
+        <p>In order to provide the core functionality of the AICheck application, we process the following categories of data:</p>
+        <ul>
+            <li><strong>Account Data:</strong> Identifiers including email address, username, and cryptographic authentication tokens.</li>
+            <li><strong>Audiovisual & Biometric Data:</strong> Localized audio recordings and video frames of an infant's face and skin, captured strictly upon explicit user activation.</li>
+            <li><strong>Telemetry & Feedback:</strong> Manual submissions comprising text-based corrections and associated `metadata.json` files generated during the evaluation of the AI models.</li>
+        </ul>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>We use your data strictly to operate and improve the AICheck service:</p>
-    <ul>
-        <li><strong>To Provide AI Analysis:</strong> Your audio and video data are processed through our integrated AI models (including YOLOv8 for skin lesions) and the Gemini API to generate real-time infant state reports.</li>
-        <li><strong>To Manually Improve Models:</strong> We do not use automated real-time retraining. Instead, the developer manually reviews your submitted feedback and associated media to filter high-quality data for future, secure, manual model updates.</li>
-    </ul>
+        <h2>2. Purpose Limitation and Processing</h2>
+        <p>We strictly adhere to the principle of purpose limitation. Data is processed exclusively for the following authorized purposes:</p>
+        <ul>
+            <li>Executing real-time inference via integrated computer vision models (e.g., YOLOv8) and the Gemini API to generate informational state reports.</li>
+            <li>Facilitating the manual, offline review of explicitly submitted user feedback to improve the accuracy and efficacy of the underlying artificial intelligence models.</li>
+        </ul>
+        <p>We expressly prohibit the automated retraining of models on live user data streams.</p>
 
-    <h2>3. Data Storage and Third-Party Services</h2>
-    <p>Your data is securely stored and processed using third-party cloud infrastructure. We utilize:</p>
-    <ul>
-        <li><strong>Google Cloud / Firebase:</strong> For secure database storage (Firestore/Realtime Database), authentication, and media storage.</li>
-        <li><strong>Gemini API:</strong> Raw data metrics are sent to the Gemini API to generate natural language reports.</li>
-    </ul>
-    <p>These third-party providers are bound by their own strict security and privacy standards.</p>
+        <h2>3. Cryptographic Security & Zero-Knowledge Architecture</h2>
+        <p>We implement a Zero-Knowledge Architecture utilizing Client-Side Encryption. All audiovisual media is encrypted on the user's device utilizing AES-256-GCM algorithms via the hardware-backed Android Keystore prior to cloud transmission. Consequently, raw media files stored in our infrastructure remain cryptographically inaccessible to the Data Controller unless explicitly decrypted by the originating user device or explicitly authorized via the manual feedback mechanism.</p>
 
-    <h2>4. Data Security</h2>
-    <p>We implement robust, server-side security rules within our Firebase architecture to ensure that your audiovisual data and feedback cannot be accessed, written, or modified without verifiable cryptographic authentication and explicit consent logs.</p>
+        <h2>4. Guardian Consent & Children's Privacy</h2>
+        <p>As the application processes the sensitive data of minors, utilization of the camera and microphone is strictly embargoed pending the execution of a verifiable Clickwrap agreement by a legally authorized parent or guardian. We do not knowingly process data from individuals under the age of 14 without such statutory consent.</p>
 
-    <h2>5. Children's Privacy</h2>
-    <p>Because AICheck processes the audiovisual data of minors, we require explicit, verifiable consent from a parent or legal guardian before the camera or microphone can be activated. We do not knowingly collect data from children under 13 without this mandatory guardian consent gate.</p>
+        <h2>5. Data Subject Rights & Erasure</h2>
+        <p>Data subjects retain comprehensive rights regarding their personal information. You possess the right to request access, rectification, portability, and erasure of your data at any time. Upon account termination or explicit request, all associated cryptographic keys, feedback payloads, and ciphertext stored within our infrastructure shall be permanently and irreversibly destroyed.</p>
 
-    <h2>6. Your Rights and Data Deletion</h2>
-    <p>You maintain full control over your data. You may request the immediate deletion of your account, your child's media files, and your submitted feedback at any time by utilizing the deletion function within the App's profile settings or by contacting the developer directly.</p>
-
+        <div class="contact-box">
+            <strong>Data Controller & Chief Privacy Officer (CPO)</strong><br>
+            For inquiries regarding this Policy or to exercise your statutory data rights, please contact the developer at:<br>
+            Email: writtenwithred@gmail.com<br>
+            GitHub Repository: github.com/writtenwithred/aicheck-legal
+        </div>
+    </div>
 </body>
 </html>
