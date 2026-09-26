@@ -5,116 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | AICheck</title>
     <style>
-        :root {
-            --primary: #0f172a;
-            --bg: #f8fafc;
-            --surface: #ffffff;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
-        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.7;
+            font-family: "Times New Roman", Times, serif;
+            background-color: #FFFFFF;
+            color: #000000;
+            line-height: 1.6;
             padding: 40px 20px;
-            margin: 0;
-        }
-        .container {
-            max-width: 760px;
+            max-width: 800px;
             margin: 0 auto;
-            background: var(--surface);
-            padding: 50px 60px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-            border: 1px solid var(--border);
-        }
-        .header {
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
         }
         h1 {
-            color: var(--primary);
-            font-size: 28px;
-            margin: 0 0 10px 0;
-            letter-spacing: -0.5px;
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
         }
-        .effective-date {
-            color: var(--text-muted);
-            font-size: 14px;
-            font-weight: 500;
+        .date {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 40px;
         }
         h2 {
-            color: var(--primary);
             font-size: 18px;
-            margin-top: 40px;
-            margin-bottom: 15px;
+            margin-top: 30px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            text-decoration: underline;
         }
         p, li {
-            font-size: 15px;
+            font-size: 16px;
+            text-align: justify;
             margin-bottom: 16px;
         }
         ul {
-            padding-left: 24px;
-            margin-bottom: 24px;
+            padding-left: 40px;
         }
-        .contact-box {
-            background-color: var(--bg);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            margin-top: 30px;
-        }
-        @media (max-width: 600px) {
-            body { padding: 15px; }
-            .container { padding: 30px 20px; }
+        .contact-section {
+            margin-top: 40px;
+            border-top: 1px solid #000000;
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Privacy Policy</h1>
-            <div class="effective-date">Effective Date: September 26, 2026</div>
-        </div>
 
-        <p>This Privacy Policy (the "Policy") governs the collection, use, and processing of personal and sensitive information by the AICheck application ("Data Controller," "we," "our," or "us"). We are committed to protecting your privacy in compliance with applicable data protection frameworks, including the Personal Information Protection Act (PIPA) of the Republic of Korea.</p>
+    <h1>Privacy Policy</h1>
+    <div class="date">Effective Date: September 26, 2026</div>
 
-        <h2>1. Scope of Data Collection</h2>
-        <p>In order to provide the core functionality of the AICheck application, we process the following categories of data:</p>
-        <ul>
-            <li><strong>Account Data:</strong> Identifiers including email address, username, and cryptographic authentication tokens.</li>
-            <li><strong>Audiovisual & Biometric Data:</strong> Localized audio recordings and video frames of an infant's face and skin, captured strictly upon explicit user activation.</li>
-            <li><strong>Telemetry & Feedback:</strong> Manual submissions comprising text-based corrections and associated `metadata.json` files generated during the evaluation of the AI models.</li>
-        </ul>
+    <p>This Privacy Policy governs the collection, processing, and protection of personal and sensitive information by the AICheck application ("Data Controller"). This document is executed in compliance with the Personal Information Protection Act (PIPA) of the Republic of Korea and other applicable data protection frameworks.</p>
 
-        <h2>2. Purpose Limitation and Processing</h2>
-        <p>We strictly adhere to the principle of purpose limitation. Data is processed exclusively for the following authorized purposes:</p>
-        <ul>
-            <li>Executing real-time inference via integrated computer vision models (e.g., YOLOv8) and the Gemini API to generate informational state reports.</li>
-            <li>Facilitating the manual, offline review of explicitly submitted user feedback to improve the accuracy and efficacy of the underlying artificial intelligence models.</li>
-        </ul>
-        <p>We expressly prohibit the automated retraining of models on live user data streams.</p>
+    <h2>1. Designation of Data Controller</h2>
+    <p>For the purposes of applicable data protection legislation, the developer of the AICheck application acts as the Data Controller. The designated Chief Privacy Officer (CPO) responsible for data subject inquiries and statutory compliance can be contacted at: writtenwithred@gmail.com.</p>
 
-        <h2>3. Cryptographic Security & Zero-Knowledge Architecture</h2>
-        <p>We implement a Zero-Knowledge Architecture utilizing Client-Side Encryption. All audiovisual media is encrypted on the user's device utilizing AES-256-GCM algorithms via the hardware-backed Android Keystore prior to cloud transmission. Consequently, raw media files stored in our infrastructure remain cryptographically inaccessible to the Data Controller unless explicitly decrypted by the originating user device or explicitly authorized via the manual feedback mechanism.</p>
+    <h2>2. Scope of Data Collection</h2>
+    <p>To facilitate the application's core functions, the Data Controller processes the following categories of information upon explicit user activation:</p>
+    <ul>
+        <li><strong>Account Identifiers:</strong> Email addresses and cryptographic authentication tokens.</li>
+        <li><strong>Biometric and Audiovisual Data:</strong> Localized audio recordings and video frames depicting infant facial features and skin conditions.</li>
+        <li><strong>Feedback and Telemetry:</strong> Textual data and system-generated metadata files submitted exclusively via the manual feedback mechanism.</li>
+    </ul>
 
-        <h2>4. Guardian Consent & Children's Privacy</h2>
-        <p>As the application processes the sensitive data of minors, utilization of the camera and microphone is strictly embargoed pending the execution of a verifiable Clickwrap agreement by a legally authorized parent or guardian. We do not knowingly process data from individuals under the age of 14 without such statutory consent.</p>
+    <h2>3. Principle of Purpose Limitation</h2>
+    <p>Data processing is strictly confined to explicitly authorized purposes. The Data Controller shall process audiovisual data solely to execute real-time inference via integrated artificial intelligence models to generate informational reports. Explicitly submitted user feedback may be reviewed offline for the sole purpose of auditing and improving the accuracy of the proprietary models. The Data Controller expressly prohibits the automated retraining of machine learning models on live user data streams.</p>
 
-        <h2>5. Data Subject Rights & Erasure</h2>
-        <p>Data subjects retain comprehensive rights regarding their personal information. You possess the right to request access, rectification, portability, and erasure of your data at any time. Upon account termination or explicit request, all associated cryptographic keys, feedback payloads, and ciphertext stored within our infrastructure shall be permanently and irreversibly destroyed.</p>
+    <h2>4. Cryptographic Security Measures</h2>
+    <p>The Data Controller employs a Zero-Knowledge Architecture via Client-Side Encryption. All media is encrypted on the user device utilizing AES-GCM-256 protocols via the hardware-backed Android Keystore prior to transmission. The Data Controller maintains no technical capacity to decrypt, view, or access raw media files stored on our infrastructure unless such files are explicitly decrypted and submitted by the user via the manual feedback mechanism.</p>
 
-        <div class="contact-box">
-            <strong>Data Controller & Chief Privacy Officer (CPO)</strong><br>
-            For inquiries regarding this Policy or to exercise your statutory data rights, please contact the developer at:<br>
-            Email: writtenwithred@gmail.com<br>
-            GitHub Repository: github.com/writtenwithred/aicheck-legal
-        </div>
+    <h2>5. Minor Privacy and Guardian Consent</h2>
+    <p>The application processes the health and biometric data of minors under the age of fourteen (14). The Data Controller strictly requires the execution of a verifiable consent agreement by a legally authorized parent or guardian prior to data collection. Unauthorized recording of minors is strictly prohibited.</p>
+
+    <h2>6. Data Subject Rights and Erasure</h2>
+    <p>Data subjects retain the statutory right to request access, rectification, or erasure of their personal data. Upon receipt of an erasure request or the termination of an account, the Data Controller shall permanently and irreversibly destroy all associated ciphertext and cryptographic materials.</p>
+
+    <div class="contact-section">
+        <p><strong>Contact Information:</strong><br>
+        Chief Privacy Officer<br>
+        Email: writtenwithred@gmail.com<br>
+        Repository: github.com/writtenwithred/aicheck-legal</p>
     </div>
+
 </body>
 </html>
